@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    background-color: lightgrey;
+    background-image: url("images/bg.png");
+}
+
+.large-font {
+    font-size: 30px;
+    text-align: center;
+}
+
+.progress {
+    height:50px;
+    text-align:center;
+}
+
+.progress-bar {
+    padding:15px;
+    height:50px;
+    background-color:#323232;
+}
