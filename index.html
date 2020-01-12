@@ -40,7 +40,6 @@
   </head>
 
   <body>
-    <div id="particles-js"></div>
     <div class="container" id="app">
     <br>
       <h1>Donation Progress</h1>
@@ -59,36 +58,54 @@
   <h4 class="card-header">Beyondcoin donations</h4>
   <div class="card-body"><p>The Beyondcoin development team partially relies on donations to fund the development and integration for services, exchanges and other third-party applications. <!--In the past we have used community donations for hardware wallet implementations,
     exchange listings, being added to third party wallets, and more.--> A large sum of the required funds have been paid for by the development team and a few large Beyondcoin holders. Receiving more community donations would significantly help Beyondcoin grow and show the cryptocurrency space Beyondcoin's full potential.</p>
-    <p class="card-title">We calculate the amount in Bitcoin.</p>
+    <p class="card-title">We calculate the amount in Bitcoin (only BTC, LTC, ETH, & DOGE donations automatically show progress).</p>
     <br>
-    <p class="card-text">BTC: {{ bitcoinAddress }}</p>
+    <b><a>Bitcoin:</a></b>
+    <p class="card-text"><!--BTC:-->{{ bitcoinAddress }}</p>
     <img src="/images/bitcoin-address.png" alt="beyondcoin bitcoin donation address">
     <br /><br />
-    <p class="card-text">DOGE: {{ dogecoinAddress }}</p>
+    <b><a>Dogecoin:</a></b>
+    <p class="card-text"><!--DOGE:-->{{ dogecoinAddress }}</p>
     <img src="/images/dogecoin-address.png" alt="beyondcoin dogecoin donation address">
     <br /><br />
-    <p class="card-text">LTC: {{ litecoinAddress}}</p>
+    <b><a>Litecoin:</a></b>
+    <p class="card-text"><!--LTC:-->{{ litecoinAddress}}</p>
     <img src="/images/litecoin-address.png" alt="beyondcoin litecoin donation address">
     <br /><br />
-    <p class="card-text">ETH: {{ ethereumAddress}}</p>
+    <b><a>Ethereum:</a></b>
+    <p class="card-text"><!--ETH:-->{{ ethereumAddress}}</p>
     <img src="/images/ethereum-address.png" alt="beyondcoin ethereum donation address">
     <br /><br />
-    <p class="card-text">BYND: {{ beyondcoinAddress}}</p>
+    <b><a>Beyondcoin:</a></b>
+    <p class="card-text"><!--BYND:-->{{ beyondcoinAddress}}</p>
     <img src="/images/beyondcoin-address.png" alt="beyondcoin donation address">
+    <br /><br />
+    <b><a>Quebecoin:</a></b>
+    <p class="card-text"><!--QBC:-->{{ quebecoinAddress}}</p>
+    <img src="/images/quebecoin-address.png" alt="beyondcoin quebecoin donation address">
+    <br /><br />
+    <b><a>LucentGold:</a></b>
+    <p class="card-text"><!--LCNT:-->{{ lucentAddress}}</p>
+    <img src="/images/lucent-address.png" alt="beyondcoin lucent donation address">
+    <br /><br />
+    <b><a>ALTMCoin:</a></b>
+    <p class="card-text"><!--ALTM:-->{{ altmAddress}}</p>
+    <img src="/images/altm-address.png" alt="beyondcoin altm donation address">
     <center><a href="https://beyondcoin.io" class="btn btn-primary" style="margin-top: 5%">Visit the Beyondcoin website</a></center>
   </div>
 </div>
 <br>
 
-<pre>
+<pre align="center">
   Raised in December: 0.00000000 BTC (0.00%)
 </pre>
 <!--<br>-->
         </div>
       </div>
 
-      <footer class="footer">
-        <p>&copy; Beyondcoin 2019 - 2020</p>
+      <footer class="footer" align="center">
+        <a>Go beyond the impossible!</a>
+        <p>&copy; 2019-2020 The Beyondcoin Project — All Rights Reserved</p>
       </footer>
 
     </div> <!-- /container -->
@@ -117,11 +134,17 @@
           litecoinAddress: "MJ4tNQJHiipxwomuKtFYhJxUNeT7A5Ji6C",
           ethereumAddress: "0x672476F542967b8Cc4d7165D393D68aDC34606DA",
           beyondcoinAddress: "BRSVbvusH1bXG7sd7t63qdgh66jusHMdJL",
+          quebecoinAddress: "3BQHA38yrZQHPLcp4zvxnNkND7E287716z",
+          lucentAddress: "Lc3RQi1VjVVSsAEYLt71Z5qtK7Vdrzzp9Y",
+          altmAddress: "AcQ6B9KYbqak51qpXcUSo5H8WszY1JmoyF",
           bitcoinBalance: 0,
-          beyondcoinBalance: 0,
           dogecoinBalance: 0,
           litecoinBalance: 0,
           ethereumBalance: 0,
+          beyondcoinBalance: 0,
+          quebecoinBalance: 0,
+          lucentBalance: 0,
+          altmBalance: 0,
         };
       },
       mounted: function() {
@@ -143,12 +166,15 @@
           }))
         },
 
-        getRaisedFundsInBTC: function(bitcoin, beyondcoin, dogecoin, litecoin, ethereum) {
+        getRaisedFundsInBTC: function(bitcoin, beyondcoin, dogecoin, litecoin, ethereum, quebecoin, lucent, altm) {
           this.bitcoinBalance = bitcoin
           this.beyondcoinBalance = beyondcoin
           this.dogecoinBalance = dogecoin
           this.litecoinBalance = litecoin
           this.ethereumBalance = ethereum
+          this.ethereumBalance = quebecoin
+          this.ethereumBalance = lucent
+          this.ethereumBalance = altmcoin
 
             axios.get('https://www.worldcoinindex.com/apiservice/ticker?key=TMVEUGZjmAKnIgFg1gmJx7SVk&label=byndbtc-dogebtc-ltcbtc-ethbtc&fiat=btc')
             .then(response => {
