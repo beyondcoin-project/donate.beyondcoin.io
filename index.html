@@ -5,7 +5,7 @@
     <link rel="shortcut icon" href="favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Beyondcoin donations">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 
     <title>Beyondcoin community donations</title>
 
@@ -14,6 +14,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        background-color: lightgrey;
+        /*background-image: url("images/bg.png");*/
+      }
+
+      .large-font {
+        font-size: 30px;
+        text-align: center;
+      }
+
+      .progress {
+        height:50px;
+        text-align:center;
+      }
+
+      .progress-bar {
+        padding:15px;
+        height:50px;
+        background-color:#323232;
+      }
+    </style>
   </head>
 
   <body>
@@ -34,24 +57,24 @@
 
         <div class="card">
   <h4 class="card-header">Beyondcoin donations</h4>
-  <div class="card-body"><p>The Beyondcoin development team partially relies on donations to fund the development and integration for services, exchanges and other third-party applications. In the past we have used community donations for hardware wallet implementations,
-    exchange listings, being added to third party wallets, being added to iVendPay and more. A large sum of the required funds have been paid for by the development team and a few large Beyondcoin holders. Receiving more community donations would significantly help Beyondcoin grow and show the cryptocurrency space Beyondcoin's full potential.</p>
-    <p class="card-title">We calculate the amount in bitcoin.</p>
+  <div class="card-body"><p>The Beyondcoin development team partially relies on donations to fund the development and integration for services, exchanges and other third-party applications. <!--In the past we have used community donations for hardware wallet implementations,
+    exchange listings, being added to third party wallets, and more.--> A large sum of the required funds have been paid for by the development team and a few large Beyondcoin holders. Receiving more community donations would significantly help Beyondcoin grow and show the cryptocurrency space Beyondcoin's full potential.</p>
+    <p class="card-title">We calculate the amount in Bitcoin.</p>
     <br>
     <p class="card-text">BTC: {{ bitcoinAddress }}</p>
-    <img v-bind:src= "'https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl' + bitcoinAddress" alt="beyondcoin bitcoin donation address">
-
+    <img src="/images/bitcoin-address.png" alt="beyondcoin bitcoin donation address">
+    <br /><br />
     <p class="card-text">DOGE: {{ dogecoinAddress }}</p>
-    <img v-bind:src= "'https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl' + dogecoinAddress" alt="beyondcoin dogecoin donation address">
-
+    <img src="/images/dogecoin-address.png" alt="beyondcoin dogecoin donation address">
+    <br /><br />
     <p class="card-text">LTC: {{ litecoinAddress}}</p>
-    <img v-bind:src= "'https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl' + litecoinAddress" alt="beyondcoin litecoin donation address">
-
+    <img src="/images/litecoin-address.png" alt="beyondcoin litecoin donation address">
+    <br /><br />
     <p class="card-text">ETH: {{ ethereumAddress}}</p>
-    <img v-bind:src= "'https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl' + ethereumAddress" alt="beyondcoin ethereum donation address">
-
+    <img src="/images/ethereum-address.png" alt="beyondcoin ethereum donation address">
+    <br /><br />
     <p class="card-text">BYND: {{ beyondcoinAddress}}</p>
-    <img v-bind:src= "'https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl' + beyondcoinAddress" alt="beyondcoin donation address">
+    <img src="/images/beyondcoin-address.png" alt="beyondcoin donation address">
     <center><a href="https://beyondcoin.io" class="btn btn-primary" style="margin-top: 5%">Visit the Beyondcoin website</a></center>
   </div>
 </div>
