@@ -92,6 +92,10 @@
     <p class="card-text"><!--ETH:-->{{ ethereumAddress}}</p>
     <img src="/images/ethereum-address.png" alt="beyondcoin ethereum donation address">
     <br /><br />
+    <b><a>Digibyte:</a></b>
+    <p class="card-text"><!--DGB:-->{{ digibyteAddress}}</p>
+    <img src="/images/digibyte-address.png" alt="beyondcoin digibyte donation address">
+    <br /><br />
     <b><a>Beyondcoin:</a></b>
     <p class="card-text"><!--BYND:-->{{ beyondcoinAddress}}</p>
     <img src="/images/beyondcoin-address.png" alt="beyondcoin donation address">
@@ -100,9 +104,9 @@
     <p class="card-text"><!--QBC:-->{{ quebecoinAddress}}</p>
     <img src="/images/quebecoin-address.png" alt="beyondcoin quebecoin donation address">
     <br /><br />
-    <b><a>LucentGold:</a></b>
-    <p class="card-text"><!--LCNT:-->{{ lucentAddress}}</p>
-    <img src="/images/lucent-address.png" alt="beyondcoin lucent donation address">
+    <b><a>Mincoin:</a></b>
+    <p class="card-text"><!--MNC:-->{{ mincoinAddress}}</p>
+    <img src="/images/mincoin-address.png" alt="beyondcoin mincoin donation address">
     <br /><br />
     <b><a>ALTMCoin:</a></b>
     <p class="card-text"><!--ALTM:-->{{ altmAddress}}</p>
@@ -145,21 +149,23 @@
           goalBTC: 0.125,
           totalBitcoinsRaised: 0,
           percentage: 0,
-          bitcoinAddress: "3HL9gemfU4PcgioTizn2dTejypvcADGKGe",
-          dogecoinAddress: "DBceNjjQzvtxzrfWEJ8FbkanusctrLkK25",
-          litecoinAddress: "MJ4tNQJHiipxwomuKtFYhJxUNeT7A5Ji6C",
-          ethereumAddress: "0x672476F542967b8Cc4d7165D393D68aDC34606DA",
+          bitcoinAddress: "3FjtP4J4DCALG66YZPnYg41kjsHjeHtrTj",
+          dogecoinAddress: "D9mYPuZ27dsw4MB2CX9kHZXiHUcnMzthz5",
+          litecoinAddress: "MRpTSCDHcAYjQtXLYrsvvJfdCFJxtyqVqV",
+          ethereumAddress: "0x6B4E5D7f56eDFae9684E17993DF52e7bF1211E33",
+          digibyteAddress: "SWmrVtv51qHTQcMJJyW1dv57kbkD3LqXqH",
           beyondcoinAddress: "BRSVbvusH1bXG7sd7t63qdgh66jusHMdJL",
           quebecoinAddress: "3BQHA38yrZQHPLcp4zvxnNkND7E287716z",
-          lucentAddress: "Lc3RQi1VjVVSsAEYLt71Z5qtK7Vdrzzp9Y",
+          mincoinAddress: "MMVD3eofsNmhnf4gSDCuFfimmmEewb6K1W",
           altmAddress: "AcQ6B9KYbqak51qpXcUSo5H8WszY1JmoyF",
           bitcoinBalance: 0,
           dogecoinBalance: 0,
           litecoinBalance: 0,
           ethereumBalance: 0,
+          digibyteBalance: 0,
           beyondcoinBalance: 0,
           quebecoinBalance: 0,
-          lucentBalance: 0,
+          mincoinBalance: 0,
           altmBalance: 0,
         };
       },
@@ -182,17 +188,18 @@
           }))
         },
 
-        getRaisedFundsInBTC: function(bitcoin, beyondcoin, dogecoin, litecoin, ethereum, quebecoin, lucent, altm) {
+        getRaisedFundsInBTC: function(bitcoin, beyondcoin, dogecoin, litecoin, ethereum, digibyte, quebecoin, mincoin, altm) {
           this.bitcoinBalance = bitcoin
           this.beyondcoinBalance = beyondcoin
           this.dogecoinBalance = dogecoin
           this.litecoinBalance = litecoin
           this.ethereumBalance = ethereum
-          this.ethereumBalance = quebecoin
-          this.ethereumBalance = lucent
-          this.ethereumBalance = altmcoin
+          this.digibyteBalance = digibyte
+          this.quebecoinBalance = quebecoin
+          this.mincoinBalance = mincoin
+          this.altmBalance = altmcoin
 
-            axios.get('https://www.worldcoinindex.com/apiservice/ticker?key=TMVEUGZjmAKnIgFg1gmJx7SVk&label=byndbtc-dogebtc-ltcbtc-ethbtc&fiat=btc')
+            axios.get('https://www.worldcoinindex.com/apiservice/ticker?key=TMVEUGZjmAKnIgFg1gmJx7SVk&label=dogebtc-ethbtc-ltcbtc-dgbbtc&fiat=btc')
             .then(response => {
               console.log(this.litecoinBalance)
               markets = response.data.Markets
@@ -200,7 +207,8 @@
               this.totalBitcoinsRaised += markets[0].Price * this.dogecoinBalance
               this.totalBitcoinsRaised += markets[1].Price * this.ethereumBalance
               this.totalBitcoinsRaised += markets[2].Price * this.litecoinBalance
-              this.totalBitcoinsRaised += markets[3].Price * this.beyondcoinBalance
+              this.totalBitcoinsRaised += markets[2].Price * this.digibyteBalance
+              //this.totalBitcoinsRaised += markets[3].Price * this.beyondcoinBalance
               this.percentage = (this.totalBitcoinsRaised / this.goalBTC) * 100
             }).catch(error => {
               console.log(error)
