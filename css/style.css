@@ -1,7 +1,7 @@
 body {
     margin: 0;
     background-color: lightgrey;
-    background-image: url("images/bg.png");
+    background-image: url("../images/bg.png");
 }
 
 .large-font {

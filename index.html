@@ -10,21 +10,21 @@
     <meta name="keywords" content="Beyondcoin,beyondcoin,BYND,bynd,cryptocurrency,crypto,bitcoin,BTC,blockchain,donation,donate,donations"/>
     <link rel="stylesheet" href="/css/style.css">
 
-  	<!-- Open Graph / Facebook -->
-  	<meta property="og:type" content="website">
-  	<meta property="og:url" content="https://donate.beyondcoin.io">
-  	<meta property="og:title" content="Beyondcoin Community Donations">
-  	<meta property="og:description" content="Donate to the Beyondcoin Project.">
-  	<meta property="og:image" content="https://cdn.beyondcoin.io/images/common/beyondcoin-200x200.png">
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://donate.beyondcoin.io">
+        <meta property="og:title" content="Beyondcoin Project Donations">
+        <meta property="og:description" content="Donate to the Beyondcoin Project.">
+        <meta property="og:image" content="https://cdn.beyondcoin.io/images/common/beyondcoin-200x200.png">
 
-  	<!-- Twitter -->
-  	<meta property="twitter:card" content="summary_large_image">
-  	<meta property="twitter:url" content="https://donate.beyondcoin.io">
-  	<meta property="twitter:title" content="Beyondcoin Community Donations">
-	  <meta property="twitter:description" content="Donate to the Beyondcoin Project.">
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://donate.beyondcoin.io">
+        <meta property="twitter:title" content="Beyondcoin Project Donations">
+          <meta property="twitter:description" content="Donate to the Beyondcoin Project.">
     <meta property="twitter:image" content="https://cdn.beyondcoin.io/images/common/beyondcoin-200x200.png">
-    
-    <title>Beyondcoin Community Donations</title>
+
+    <title>Beyondcoin Project Donations</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -58,74 +58,73 @@
   <body>
     <div class="container" id="app">
     <br>
-      <h1>Donation Progress</h1>
-        <div class="progress">
+      <!--<h1>Donation Progress</h1>-->
+  <!--      <div class="progress">
           <div class="progress-bar progress-bar-striped active large-font" role="progressbar" aria-valuenow="0" aria-valuemin="100" aria-valuemax="100" v-bind:style="{ 'width':percentage+'%'}">
             {{ percentage | percent }}%
           </div>
         </div>
       <h5>Donation goal: {{ goalBTC }} BTC / month</h5>
       <h5>Raised: {{ totalBitcoinsRaised | satoshi }} BTC</h5>
-      <br>
+      <br>-->
       <div class="row marketing">
         <div class="col-lg-12">
 
         <div class="card">
-  <h4 class="card-header">Beyondcoin donations</h4>
+  <h4 class="card-header">Beyondcoin Project Donations</h4>
   <div class="card-body"><p>The Beyondcoin development team partially relies on donations to fund the development and integration for services, exchanges and other third-party applications. <!--In the past we have used community donations for hardware wallet implementations,
     exchange listings, being added to third party wallets, and more.--> A large sum of the required funds have been paid for by the development team and a few large Beyondcoin holders. Receiving more community donations would significantly help Beyondcoin grow and show the cryptocurrency space Beyondcoin's full potential.</p>
-    <p class="card-title">We calculate the amount in Bitcoin (only BTC, LTC, ETH, DOGE, & DGB donations automatically show progress).</p>
+    <p class="card-title">We calculate the donated amount in <!--Bitcoin-->USD as we get donations.</p>
+    <h3>Current: $0</h3>
+    <h3>Goal: $1000</h3>
+    <h4>Usage: Exchange listings</h4>
     <br>
-    <b><a>Bitcoin:</a></b>
-    <p class="card-text"><!--BTC:-->{{ bitcoinAddress }}</p>
-    <img src="/images/bitcoin-address.png" alt="beyondcoin bitcoin donation address">
-    <br /><br />
-    <b><a>Dogecoin:</a></b>
-    <p class="card-text"><!--DOGE:-->{{ dogecoinAddress }}</p>
-    <img src="/images/dogecoin-address.png" alt="beyondcoin dogecoin donation address">
-    <br /><br />
-    <b><a>Litecoin:</a></b>
-    <p class="card-text"><!--LTC:-->{{ litecoinAddress}}</p>
-    <img src="/images/litecoin-address.png" alt="beyondcoin litecoin donation address">
-    <br /><br />
-    <b><a>Ethereum:</a></b>
-    <p class="card-text"><!--ETH:-->{{ ethereumAddress}}</p>
-    <img src="/images/ethereum-address.png" alt="beyondcoin ethereum donation address">
-    <br /><br />
-    <b><a>Digibyte:</a></b>
-    <p class="card-text"><!--DGB:-->{{ digibyteAddress}}</p>
-    <img src="/images/digibyte-address.png" alt="beyondcoin digibyte donation address">
-    <br /><br />
-    <b><a>Beyondcoin:</a></b>
+    <form action="https://www.paypal.com/donate" method="post" target="_top">
+      <input type="hidden" name="cmd" value="_donations" />
+      <input type="hidden" name="business" value="VQPE8TMAX5ADE" />
+      <input type="hidden" name="item_name" value="Beyondcoin Project Donations" />
+      <input type="hidden" name="currency_code" value="USD" />
+      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+      <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+      <a href="https://venmo.com/beyondcoin"><img src="images/venmo.png" style="position: relative; max-width: 140px; top: -25px; left: 25px;"></a>
+    </form>
+    <br/>
+    <b><img src="/images/beyondcoin.png" data-src="/images/beyondcoin.png" style="height: 16px; z-index: 1000;" alt="Beyondcoin" data-loaded="true">&nbsp;Beyondcoin:</a></b>
     <p class="card-text"><!--BYND:-->{{ beyondcoinAddress}}</p>
-    <img src="/images/beyondcoin-address.png" alt="beyondcoin donation address">
+    <img src="/images/beyondcoin-address.png" alt="beyondcoin donation address"><a href="beyondcoin:BRSVbvusH1bXG7sd7t63qdgh66jusHMdJL?label=Beyondcoin Project Donations&message=Thank you for donating to the Beyondcoin Project!">Click here to open in wallet</a>
     <br /><br />
-    <b><a>Quebecoin:</a></b>
-    <p class="card-text"><!--QBC:-->{{ quebecoinAddress}}</p>
-    <img src="/images/quebecoin-address.png" alt="beyondcoin quebecoin donation address">
+    <b><img src="/images/bitcoin.png" data-src="/images/bitcoin.png" style="height: 16px; z-index: 1000;" alt="Bitcoin" data-loaded="true">&nbsp;Bitcoin:</a></b>
+    <p class="card-text"><!--BTC:-->{{ bitcoinAddress }}</p>
+    <img src="/images/bitcoin-address.png" alt="beyondcoin bitcoin donation address"><a href="bitcoin:3FjtP4J4DCALG66YZPnYg41kjsHjeHtrTj?label=Beyondcoin Project Donations&message=Thank you for donating to the Beyondcoin Project!">Click here to open in wallet</a>
     <br /><br />
-    <b><a>Mincoin:</a></b>
-    <p class="card-text"><!--MNC:-->{{ mincoinAddress}}</p>
-    <img src="/images/mincoin-address.png" alt="beyondcoin mincoin donation address">
+     <b><img src="/images/dogecoin.png" data-src="/images/dogecoin.png" style="height: 16px; z-index: 1000;" alt="Dogecoin" data-loaded="true">&nbsp;Dogecoin:</a></b>
+    <p class="card-text"><!--DOGE:-->{{ dogecoinAddress }}</p>
+    <img src="/images/dogecoin-address.png" alt="beyondcoin dogecoin donation address"><a href="dogecoin:D9mYPuZ27dsw4MB2CX9kHZXiHUcnMzthz5?label=Beyondcoin Project Donations&message=Thank you for donating to the Beyondcoin Project!">Click here to open in wallet</a>
     <br /><br />
-    <b><a>ALTMCoin:</a></b>
-    <p class="card-text"><!--ALTM:-->{{ altmAddress}}</p>
-    <img src="/images/altm-address.png" alt="beyondcoin altm donation address">
+     <b><img src="/images/litecoin.png" data-src="/images/litecoin.png" style="height: 16px; z-index: 1000;" alt="Litecoin" data-loaded="true">&nbsp;Litecoin:</a></b>
+    <p class="card-text"><!--LTC:-->{{ litecoinAddress}}</p>
+    <img src="/images/litecoin-address.png" alt="beyondcoin litecoin donation address"><a href="litecoin:MRpTSCDHcAYjQtXLYrsvvJfdCFJxtyqVqV?label=Beyondcoin Project Donations&message=Thank you for donating to the Beyondcoin Project!">Click here to open in wallet</a>
+    <br /><br />
+    <b><img src="/images/digibyte.png" data-src="/images/digibyte.png" style="height: 16px; z-index: 1000;" alt="Digibyte" data-loaded="true">&nbsp;Digibyte:</a></b>
+    <p class="card-text"><!--DGB:-->{{ digibyteAddress}}</p>
+    <img src="/images/digibyte-address.png" alt="beyondcoin digibyte donation address"><a href="digibyte:SWmrVtv51qHTQcMJJyW1dv57kbkD3LqXqH?label=Beyondcoin Project Donations&message=Thank you for donating to the Beyondcoin Project!">Click here to open in wallet</a>
+    <br /><br />
     <center><a href="https://beyondcoin.io" class="btn btn-primary" style="margin-top: 5%">Visit the Beyondcoin website</a></center>
   </div>
 </div>
 <br>
 
 <pre align="center">
-  Raised in December: 0.00000000 BTC (0.00%)
+  <!--Raised in June: 0.00000000 BTC (0.00%)-->
+  Total Raised: $0.00
 </pre>
 <!--<br>-->
         </div>
       </div>
 
       <footer class="footer" align="center">
-        <a>Go beyond the impossible!</a>
-        <p>&copy; 2019-2020 The Beyondcoin Project — All Rights Reserved</p>
+        <a>Go beyond the impossible</a>
+        <p>&copy; 2019-2021 The Beyondcoin Project — All Rights Reserved</p>
       </footer>
 
     </div> <!-- /container -->
@@ -155,18 +154,12 @@
           ethereumAddress: "0x6B4E5D7f56eDFae9684E17993DF52e7bF1211E33",
           digibyteAddress: "SWmrVtv51qHTQcMJJyW1dv57kbkD3LqXqH",
           beyondcoinAddress: "BRSVbvusH1bXG7sd7t63qdgh66jusHMdJL",
-          quebecoinAddress: "3BQHA38yrZQHPLcp4zvxnNkND7E287716z",
-          mincoinAddress: "MMVD3eofsNmhnf4gSDCuFfimmmEewb6K1W",
-          altmAddress: "AcQ6B9KYbqak51qpXcUSo5H8WszY1JmoyF",
           bitcoinBalance: 0,
           dogecoinBalance: 0,
           litecoinBalance: 0,
           ethereumBalance: 0,
           digibyteBalance: 0,
           beyondcoinBalance: 0,
-          quebecoinBalance: 0,
-          mincoinBalance: 0,
-          altmBalance: 0,
         };
       },
       mounted: function() {
@@ -196,9 +189,6 @@
           this.litecoinBalance = litecoin
           this.ethereumBalance = ethereum
           this.digibyteBalance = digibyte
-          this.quebecoinBalance = quebecoin
-          this.mincoinBalance = mincoin
-          this.altmBalance = altmcoin
 
             axios.get('https://www.worldcoinindex.com/apiservice/ticker?key=TMVEUGZjmAKnIgFg1gmJx7SVk&label=dogebtc-ethbtc-ltcbtc-dgbbtc&fiat=btc')
             .then(response => {
